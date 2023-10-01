@@ -1,8 +1,94 @@
 .App {
   text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+  text-align: center;
+  color: gold;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -0.3rem;
 }
-/* write your parent styles in here for your App.js */
+.title {
+  color: gold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+
+.akordeon {
+  background-color: rgba(34, 34, 34, 0.9);
+  margin: 20px;
+  max-height: 3rem;
+  overflow: hidden;
+  border: 1px solid aliceblue;
+  border-radius: 3px;
+  -webkit-transitipn: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+  -ms-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+
+  transition: max-height 0.3s ease-in-out;
+}
+
+.akor-title {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  color: gold;
+
+  transition: background-color 0.5s;
+}
+
+.akor-title:hover {
+  background-color: #444;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+
+li {
+  padding: 0.3rem 0;
+}
+
+.akordeon.open {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.akordeon.open .akor-title {
+  border-bottom: 1px solid white;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.akordeon .arrow {
+  rotate: 270deg;
+}
+
+.akordeon.open .arrow {
+  rotate: 90deg;
+}
+.akordeon.open .akordeon .arrow {
+  rotate: 270deg;
+}
+.akordeon.open .akordeon.open .arrow {
+  rotate: 90deg;
+}
